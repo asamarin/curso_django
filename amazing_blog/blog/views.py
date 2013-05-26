@@ -32,4 +32,5 @@ class PostEdit(UpdateView):
 
 class PostDelete(DeleteView):
     model = Post
+    form_class = PostForm
     success_url = reverse_lazy('post_list')

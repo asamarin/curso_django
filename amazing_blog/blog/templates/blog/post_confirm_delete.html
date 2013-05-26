@@ -1,10 +1,12 @@
 {% extends "blog/post_list.html" %}
 
 {% block content %}
-    <h1>Creacion/Actualizacion de post</h1>
+    <h1>Borrar post</h1>
+    <p>Haga click en "Enviar cambios" si está seguro de eliminar el post "{{ object.titulo }}"</p>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_table }}
         <button type="submit">Enviar cambios</button>
     </form>
+    <a href={% url 'post_detail' pk=object.id %}>Cancelar</a>
 {% endblock %}

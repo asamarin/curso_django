@@ -12,6 +12,7 @@
                 <h2><a href={% url 'post_detail' pk=post.id %}>{{ post.titulo }}</a></h2>
                 <p>{{ post.intro }}</p>
             {% endfor %}
+            <a href={% url 'post_create' %}>Nuevo post</a>
         {% endblock %}
     </body>
 </html>

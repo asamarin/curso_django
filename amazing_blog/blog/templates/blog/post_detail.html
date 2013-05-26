@@ -5,4 +5,7 @@
     <h2>{{ object.titulo }}</h2>
     <p>{{ object.intro }}</p>
     <p>{{ object.mas }}</p>
+    <a href={% url 'post_list' %}>Lista de posts</a> | 
+    <a href={% url 'post_edit' pk=object.id %}>Editar</a> | 
+    <a href={% url 'post_delete' pk=object.id %}>Borrar</a>
 {% endblock %}
