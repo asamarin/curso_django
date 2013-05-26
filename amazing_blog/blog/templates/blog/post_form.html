@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends "blog/post_list.html" %}
+
+{% block content %}
+    <h1>Creacion/Actualizacion de post</h1>
     <form method="POST">
         {% csrf_token %}
-        {{ form }}
-        <button type="submit">Guardar</button>
+        {{ form.as_table }}
+        <button type="submit">Enviar cambios</button>
     </form>
-</body>
-</html>
+{% endblock %}

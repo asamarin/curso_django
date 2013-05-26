@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.intro }}</p>
-        <p>{{ post.mas }}</p>
-</body>
-</html>
+{% extends "blog/post_list.html" %}
+
+{% block content %}
+    <h1>Detalle de post {{ object.id }}</h1>
+    <h2>{{ object.titulo }}</h2>
+    <p>{{ object.intro }}</p>
+    <p>{{ object.mas }}</p>
+{% endblock %}

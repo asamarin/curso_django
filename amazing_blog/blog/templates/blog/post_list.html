@@ -1,13 +1,17 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
-<body>
-    {%  for post in object_list %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.intro }}</p>
-    {%  endfor %}
-
-</body>
+    <head>
+        <title>Wololoo</title>
+        <style>
+            h1 { color: red; }
+        </style>
+    </head>
+    <body>
+        {% block content %}
+            <h1>Lista de Posts</h1>
+            {% for post in object_list %}
+                <h2><a href={% url 'post_detail' pk=post.id %}>{{ post.titulo }}</a></h2>
+                <p>{{ post.intro }}</p>
+            {% endfor %}
+        {% endblock %}
+    </body>
 </html>
