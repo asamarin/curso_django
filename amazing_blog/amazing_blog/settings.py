@@ -129,6 +129,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'debug_toolbar',
+    'tinymce',
+    'crispy_forms',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,3 +163,4 @@ LOGGING = {
 }
 
 INTERNAL_IPS = ('127.0.0.1',)
+CRISPY_TEMPLATE_PACK = 'bootstrap'

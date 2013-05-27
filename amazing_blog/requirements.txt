@@ -2,3 +2,5 @@ Django
 django-extensions
 south
 django-debug-toolbar
+django-tinymce
+django-crispy-forms

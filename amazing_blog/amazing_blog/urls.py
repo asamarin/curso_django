@@ -21,7 +21,7 @@ urlpatterns = patterns('',
     url(r'post/(?P<pk>\d+)/edit$', login_required(PostEdit.as_view()), name='post_edit'),
     url(r'post/(?P<pk>\d+)/delete$', login_required(PostDelete.as_view()), name='post_delete'),
     url(r'post/(?P<pk>\d+)/$', PostDetail.as_view(), name='post_detail'),
+    url(r'^tinymce/', include('tinymce.urls')),
 
     url(r'^$', PostList.as_view(), name='post_list'),
-    #url(r'^$', 'blog.views.post_list', name='post_list'),
 )
